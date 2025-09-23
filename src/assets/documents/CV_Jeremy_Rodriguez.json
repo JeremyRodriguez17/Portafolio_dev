@@ -1,0 +1,159 @@
+{
+  "informacion_personal": {
+    "nombre_completo": "Jeremy Miller",
+    "titulo": "Estudiante de Ingeniería de Sistemas",
+    "contacto": {
+      "email": "jeremy.miller@email.com",
+      "telefono": "+123 456 7890",
+      "direccion": "Ciudad, País",
+      "github": "github.com/jeremymiller",
+      "linkedin": "linkedin.com/in/jeremymiller",
+      "portfolio": "jeremymiller.dev"
+    },
+    "perfil": "Estudiante de Ingeniería de Sistemas apasionado por el desarrollo web y la inteligencia artificial. Experiencia en desarrollo de aplicaciones modernas con React, Node.js y bases de datos."
+  },
+
+  "educacion": [
+    {
+      "institucion": "Universidad Central de Tecnología",
+      "titulo": "Ingeniería de Sistemas",
+      "periodo": "2022 - Actualidad",
+      "estado": "En curso",
+      "promedio": 4.5,
+      "cursos_destacados": [
+        "Estructuras de Datos y Algoritmos",
+        "Base de Datos Relacionales",
+        "Programación Web Avanzada",
+        "Inteligencia Artificial",
+        "Ingeniería de Software"
+      ]
+    }
+  ],
+
+  "habilidades_tecnicas": {
+    "frontend": [
+      "React",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Responsive Design",
+      "APIs RESTful"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "Autenticación JWT"
+    ],
+    "herramientas": [
+      "Git & GitHub",
+      "VS Code",
+      "Postman",
+      "Figma",
+      "Scrum",
+      "Metodologías Ágiles",
+      "Linux"
+    ]
+  },
+
+  "proyectos": [
+    {
+      "nombre": "Sistema de Gestión Académica",
+      "descripcion": "Sistema web completo para gestión de estudiantes, cursos y calificaciones",
+      "tecnologias": ["React", "Node.js", "MySQL", "Express", "JWT"],
+      "caracteristicas": [
+        "Panel de administración",
+        "Autenticación segura",
+        "Generación de reportes PDF",
+        "Interfaz responsive"
+      ],
+      "curso": "Base de Datos",
+      "estado": "Completado",
+      "github_url": "github.com/jeremymiller/sistema-academico"
+    },
+    {
+      "nombre": "Portafolio Personal",
+      "descripcion": "Sitio web personal para mostrar proyectos y habilidades",
+      "tecnologias": ["React", "Tailwind CSS", "Vite", "JavaScript"],
+      "caracteristicas": [
+        "Diseño responsive",
+        "Optimización SEO",
+        "Modales interactivos",
+        "Filtros dinámicos"
+      ],
+      "curso": "Programación Web",
+      "estado": "Completado",
+      "github_url": "github.com/jeremymiller/portfolio"
+    },
+    {
+      "nombre": "Algoritmos de Ordenamiento",
+      "descripcion": "Implementación y análisis de algoritmos de ordenamiento clásicos",
+      "tecnologias": ["Python", "Jupyter Notebook", "Matplotlib"],
+      "caracteristicas": [
+        "Análisis de complejidad temporal",
+        "Visualización de resultados",
+        "Comparativa de algoritmos"
+      ],
+      "curso": "Estructuras de Datos",
+      "estado": "En progreso",
+      "github_url": "github.com/jeremymiller/algoritmos"
+    }
+  ],
+
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nativo",
+      "porcentaje": 100
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "Avanzado (B2)",
+      "porcentaje": 80
+    },
+    {
+      "idioma": "Portugués",
+      "nivel": "Básico (A2)",
+      "porcentaje": 40
+    }
+  ],
+
+  "certificaciones": [
+    {
+      "nombre": "React Fundamentals",
+      "institucion": "Platzi",
+      "fecha": "2024",
+      "url": "platzi.com/p/jeremymiller/curso/react"
+    },
+    {
+      "nombre": "JavaScript Moderno",
+      "institucion": "Udemy",
+      "fecha": "2023",
+      "url": "udemy.com/certificate/UC-XXXXXXX"
+    },
+    {
+      "nombre": "Git y GitHub Profesional",
+      "institucion": "FreeCodeCamp",
+      "fecha": "2023",
+      "url": "freecodecamp.org/certification/jeremymiller/git"
+    }
+  ],
+
+  "intereses": [
+    "Inteligencia Artificial",
+    "Desarrollo Web Moderno",
+    "Open Source",
+    "Robótica",
+    "Videojuegos Indie"
+  ],
+
+  "metadata": {
+    "ultima_actualizacion": "2024-12-01",
+    "version": "2.1",
+    "formato": "JSON"
+  }
+}
