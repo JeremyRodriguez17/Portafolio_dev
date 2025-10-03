@@ -8,6 +8,7 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import FilterBar from "../components/FilterBar";
 import tasks from "../data/tasks.js";
+import Contact from "../components/Contact";
 
 export default function Home() {
   const [selectedTask, setSelectedTask] = useState(null);
@@ -54,6 +55,7 @@ export default function Home() {
           {" "}
           {/* ← Contenedor sin margen */}
           <Projects />
+          <Contact />
         </div>
       </main>
     </div>

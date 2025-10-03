@@ -1,21 +1,19 @@
+// components/Navbar.jsx - Mejoremos las animaciones
 import React, { useState, useEffect } from "react";
 import { useSmoothScroll } from "../hooks/useSmoothScroll";
-import CVDownloadModal from "./CVDownloadModal";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("profile");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
 
   useSmoothScroll();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) setScrolled(true);
-      else setScrolled(false);
+      setScrolled(window.scrollY > 50);
 
-      const sections = ["profile", "skills", "tasks", "projects"];
+      const sections = ["profile", "skills", "tasks", "projects", "contact"];
       const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -31,85 +29,85 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const navItems = [
+    { name: "Sobre mí", section: "profile" },
+    { name: "Habilidades", section: "skills" },
+    { name: "Mis Tareas", section: "tasks" },
+    { name: "Proyectos", section: "projects" },
+    { name: "Contacto", section: "contact" },
+  ];
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-900/95 backdrop-blur-md shadow-xl py-4"
+          ? "bg-gray-900/95 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        {/* Logo a la izquierda */}
+        {/* Logo con mejor animación */}
         <div className="text-blue-400 font-bold text-2xl">
-          <a href="#profile" className="hover:text-blue-300 transition-colors">
-            Portafolio JM
+          <a
+            href="#profile"
+            className="hover:text-blue-300 transition-all duration-300 hover:scale-105 block"
+          >
+            🚀 Portafolio JM
           </a>
         </div>
 
-        {/* Menú centrado */}
-        <div className="hidden md:flex gap-8 text-white text-lg">
-          {[
-            { name: "Sobre mí", section: "profile" },
-            { name: "Habilidades", section: "skills" },
-            { name: "Mis Tareas", section: "tasks" },
-            { name: "Proyectos", section: "projects" },
-          ].map((item) => (
+        {/* Menú desktop mejorado */}
+        <div className="hidden md:flex gap-8">
+          {navItems.map((item) => (
             <a
               key={item.section}
               href={`#${item.section}`}
-              className={`hover:text-blue-400 transition-all duration-300 relative py-2 ${
+              className={`relative py-2 transition-all duration-300 group ${
                 activeSection === item.section
                   ? "text-blue-400 font-semibold"
-                  : "text-gray-300"
+                  : "text-gray-300 hover:text-white"
               }`}
-              onClick={handleNavClick}
             >
               {item.name}
-              {activeSection === item.section && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400"></span>
-              )}
+              <span
+                className={`absolute bottom-0 left-0 h-0.5 bg-blue-400 transition-all duration-300 ${
+                  activeSection === item.section
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
+                }`}
+              ></span>
             </a>
           ))}
         </div>
 
-        {/* Espacio vacío a la derecha para balancear */}
+        {/* Espacio balanceado */}
         <div className="w-24 hidden md:block"></div>
 
-        {/* Botón menú móvil */}
+        {/* Botón móvil mejorado */}
         <button
-          className="md:hidden text-white text-2xl z-50"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-white text-2xl z-50 p-2 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 transition-all duration-300"
         >
           {isMobileMenuOpen ? "✕" : "☰"}
         </button>
 
-        {/* Menú móvil */}
+        {/* Menú móvil mejorado */}
         <div
-          className={`md:hidden fixed top-0 left-0 w-full h-screen bg-gray-900/95 backdrop-blur-md transition-transform duration-300 z-40 ${
+          className={`md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-md transition-transform duration-500 z-40 ${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <div className="flex flex-col items-center justify-center h-full space-y-8">
-            {[
-              { name: "Sobre mí", section: "profile" },
-              { name: "Habilidades", section: "skills" },
-              { name: "Mis Tareas", section: "tasks" },
-              { name: "Proyectos", section: "projects" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <a
                 key={item.section}
                 href={`#${item.section}`}
-                className={`text-2xl font-semibold transition-all duration-300 ${
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`text-3xl font-bold transition-all duration-300 hover:scale-110 ${
                   activeSection === item.section
-                    ? "text-blue-400 scale-110"
+                    ? "text-blue-400"
                     : "text-gray-300 hover:text-white"
                 }`}
-                onClick={handleNavClick}
               >
                 {item.name}
               </a>
@@ -117,11 +115,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      <CVDownloadModal
-        isOpen={isCVModalOpen}
-        onClose={() => setIsCVModalOpen(false)}
-      />
     </nav>
   );
 }
