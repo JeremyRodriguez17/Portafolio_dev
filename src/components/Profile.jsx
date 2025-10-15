@@ -93,12 +93,6 @@ export default function Profile() {
               >
                 📚 Ver Mis Tareas
               </a>
-              <a
-                href="/ruta/tu/CV.pdf"
-                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-              >
-                📄 Descargar CV
-              </a>
             </div>
           </div>
         </div>

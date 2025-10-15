@@ -22,9 +22,11 @@ export default function Footer() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Jeremy Miller</h3>
+                <h3 className="text-xl font-bold text-white">
+                  Jeremy Rodriguez
+                </h3>
                 <p className="text-gray-400 text-sm mt-1">
-                  Full-Stack Developer
+                  Student. Mariano Galvez de Guatemala
                 </p>
               </div>
             </div>
@@ -42,10 +44,10 @@ export default function Footer() {
             </h4>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { name: "Inicio", href: "#profile", icon: "↗" },
                 { name: "Habilidades", href: "#skills", icon: "⚡" },
-                { name: "Proyectos", href: "#tasks", icon: "💼" },
-                { name: "Contacto", href: "#projects", icon: "📧" },
+                { name: "Mis Tareas", href: "#tasks", icon: "💼" },
+                { name: "Proyectos", href: "#projects", icon: "📧" },
+                { name: "Contacto", href: "#contact", icon: "📞" },
               ].map((link) => (
                 <a
                   key={link.name}
@@ -61,7 +63,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Redes Sociales Mejoradas */}
           <div className="text-center lg:text-right">
             <h4 className="text-md font-semibold text-white mb-4 relative inline-block">
               Conectemos
@@ -75,15 +76,10 @@ export default function Footer() {
                   label: "GitHub",
                   color: "hover:bg-gray-700 hover:border-gray-500",
                 },
-                {
-                  icon: FaLinkedin,
-                  href: "https://linkedin.com/in/jeremy-miller",
-                  label: "LinkedIn",
-                  color: "hover:bg-blue-600 hover:border-blue-400",
-                },
+
                 {
                   icon: FaEnvelope,
-                  href: "mailto:jeremy@email.com",
+                  href: "mailto:jrodriguezg35@miumg.edu.gt",
                   label: "Email",
                   color: "hover:bg-red-500 hover:border-red-400",
                 },
@@ -101,7 +97,7 @@ export default function Footer() {
               ))}
             </div>
             <div className="text-gray-400 text-sm bg-gray-800/30 rounded-lg px-3 py-2 inline-block border border-gray-600/30">
-              ✉️ jeremy@email.com
+              ✉️ jrodriguezg35@miumg.edu.gt
             </div>
           </div>
         </div>
@@ -123,10 +119,10 @@ export default function Footer() {
         {/* Información Inferior Mejorada */}
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-3 md:space-y-0">
           <div className="flex items-center gap-3 text-gray-400 text-sm">
-            <span>© {currentYear} Jeremy Miller</span>
+            <span>© {currentYear} Jeremy Rodriguez</span>
             <span className="hidden md:inline">•</span>
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-medium">
-              Portfolio v2.0
+              Portfolio v1.0
             </span>
           </div>
 

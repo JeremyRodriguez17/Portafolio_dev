@@ -1,4 +1,4 @@
-// components/Contact.jsx - VERSIÓN COMPLETA Y FUNCIONAL
+// components/Contact.jsx - VERSIÓN ACTUALIZADA CON FACEBOOK E ICONOS CORRECTOS
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
@@ -39,6 +39,15 @@ export default function Contact() {
     }
 
     try {
+      // Obtener fecha actual
+      const currentDate = new Date().toLocaleString("es-GT", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
       await emailjs.send(
         "service_olskbwd",
         "template_iurmibr",
@@ -49,6 +58,7 @@ export default function Contact() {
           message: formData.message,
           to_email: "jrodriguezg35@miumg.edu.gt",
           reply_to: formData.email,
+          date: currentDate,
           user_email: formData.email,
         },
         "Ie75YNMAyybPqV1ex"
@@ -101,6 +111,13 @@ export default function Contact() {
       link: "https://www.instagram.com/_.jeremymiller._/",
       description: "Sígueme en Instagram",
     },
+    {
+      icon: "👥",
+      title: "Facebook",
+      value: "Jeremy Rodriguez",
+      link: "https://www.facebook.com/profile.php?id=61576146734818",
+      description: "Conectemos en Facebook",
+    },
   ];
 
   const socialLinks = [
@@ -114,7 +131,13 @@ export default function Contact() {
       name: "GitHub",
       icon: "💻",
       url: "https://github.com/JeremyRodriguez17",
-      color: "hover:bg-gray-500/20 hover:border-gray-500/50",
+      color: "hover:bg-gray-800/50 hover:border-gray-600/50",
+    },
+    {
+      name: "WhatsApp",
+      icon: "💚",
+      url: "https://wa.me/50236368765",
+      color: "hover:bg-green-500/20 hover:border-green-500/50",
     },
     {
       name: "Instagram",
@@ -123,16 +146,16 @@ export default function Contact() {
       color: "hover:bg-pink-500/20 hover:border-pink-500/50",
     },
     {
+      name: "Facebook",
+      icon: "👥",
+      url: "https://www.facebook.com/profile.php?id=61576146734818",
+      color: "hover:bg-blue-600/20 hover:border-blue-600/50",
+    },
+    {
       name: "Pinterest",
       icon: "📌",
       url: "https://es.pinterest.com/jeremyrodriguez085",
       color: "hover:bg-red-600/20 hover:border-red-600/50",
-    },
-    {
-      name: "WhatsApp",
-      icon: "💚",
-      url: "https://wa.me/50236368765",
-      color: "hover:bg-green-500/20 hover:border-green-500/50",
     },
   ];
 

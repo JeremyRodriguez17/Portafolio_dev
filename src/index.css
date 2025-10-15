@@ -2,6 +2,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+[id] {
+  scroll-margin-top: 80px;
 }
 
 /* Tema oscuro (por defecto) */
