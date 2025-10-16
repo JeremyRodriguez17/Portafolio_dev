@@ -9,7 +9,8 @@ import Footer from "../components/Footer";
 import FilterBar from "../components/FilterBar";
 import tasks from "../data/tasks.js";
 import Contact from "../components/Contact";
-import Loading from "../components/Loading";
+import Reviews from "../components/reviews";
+import ScrollButtons from "../components/ScrollButtons";
 
 export default function Home() {
   const [selectedTask, setSelectedTask] = useState(null);
@@ -57,6 +58,8 @@ export default function Home() {
           {/* ← Contenedor sin margen */}
           <Projects />
           <Contact />
+          <Reviews />
+          <ScrollButtons />
         </div>
       </main>
     </div>

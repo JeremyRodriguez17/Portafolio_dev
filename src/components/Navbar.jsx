@@ -1,13 +1,10 @@
-// components/Navbar.jsx - Mejoremos las animaciones
+// components/Navbar.jsx - VERSIÓN SIMPLE Y FUNCIONAL
 import React, { useState, useEffect } from "react";
-import { useSmoothScroll } from "../hooks/useSmoothScroll";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("profile");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useSmoothScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,12 +26,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
-    { name: "Sobre mí", section: "profile" },
-    { name: "Habilidades", section: "skills" },
-    { name: "Mis Tareas", section: "tasks" },
-    { name: "Proyectos", section: "projects" },
-    { name: "Contacto", section: "contact" },
+    { name: "Sobre mí", section: "profile", icon: "👤" },
+    { name: "Habilidades", section: "skills", icon: "⚡" },
+    { name: "Mis Tareas", section: "tasks", icon: "📚" },
+    { name: "Proyectos", section: "projects", icon: "🚀" },
+    { name: "Contacto", section: "contact", icon: "📞" },
+    { name: "Reseñas", section: "reviews", icon: "⭐" },
   ];
 
   return (
@@ -45,75 +51,63 @@ export default function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        {/* Logo con mejor animación */}
-        <div className="text-blue-400 font-bold text-2xl">
-          <a
-            href="#profile"
-            className="hover:text-blue-300 transition-all duration-300 hover:scale-105 block"
-          >
-            🚀 Portafolio JM
-          </a>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+        {/* Logo Simple */}
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+            <span className="text-white font-bold">JM</span>
+          </div>
+          <span className="text-white font-bold text-xl">Portafolio</span>
         </div>
 
-        {/* Menú desktop mejorado */}
-        <div className="hidden md:flex gap-8">
+        {/* Menú Desktop Simple */}
+        <div className="hidden md:flex gap-6">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.section}
-              href={`#${item.section}`}
-              className={`relative py-2 transition-all duration-300 group ${
+              onClick={() => scrollToSection(item.section)}
+              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                 activeSection === item.section
-                  ? "text-blue-400 font-semibold"
-                  : "text-gray-300 hover:text-white"
+                  ? "bg-blue-500 text-white"
+                  : "text-gray-300 hover:text-white hover:bg-gray-700"
               }`}
             >
               {item.name}
-              <span
-                className={`absolute bottom-0 left-0 h-0.5 bg-blue-400 transition-all duration-300 ${
-                  activeSection === item.section
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
-                }`}
-              ></span>
-            </a>
+            </button>
           ))}
         </div>
 
-        {/* Espacio balanceado */}
-        <div className="w-24 hidden md:block"></div>
-
-        {/* Botón móvil mejorado */}
+        {/* Botón Móvil Simple */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-white text-2xl z-50 p-2 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 transition-all duration-300"
+          className="md:hidden text-white text-2xl z-50 p-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition-all duration-300"
         >
           {isMobileMenuOpen ? "✕" : "☰"}
         </button>
 
-        {/* Menú móvil mejorado */}
-        <div
-          className={`md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-md transition-transform duration-500 z-40 ${
-            isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            {navItems.map((item) => (
-              <a
-                key={item.section}
-                href={`#${item.section}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-3xl font-bold transition-all duration-300 hover:scale-110 ${
-                  activeSection === item.section
-                    ? "text-blue-400"
-                    : "text-gray-300 hover:text-white"
-                }`}
-              >
-                {item.name}
-              </a>
-            ))}
+        {/* Menú Móvil Simple */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-md z-40 pt-20">
+            <div className="flex flex-col items-center space-y-6 p-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.section}
+                  onClick={() => scrollToSection(item.section)}
+                  className={`w-full max-w-xs py-4 rounded-xl text-lg font-semibold transition-all duration-300 ${
+                    activeSection === item.section
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
+                  }`}
+                >
+                  <div className="flex items-center gap-3 justify-center">
+                    <span>{item.icon}</span>
+                    <span>{item.name}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );

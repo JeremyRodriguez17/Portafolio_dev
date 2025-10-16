@@ -1,28 +1,33 @@
-// data/projects.js - INFORMACIÓN COMPLETA
+// data/projects.js - INFORMACIÓN REAL DEL PROYECTO
 const projects = [
   {
     id: 1,
-    titulo: "Proyecto Final de Ingeniería en Sistemas",
+    titulo: "Proyecto 0048 - Aseguramiento de la Calidad de Software",
     descripcion:
-      "Desarrollo de una solución tecnológica integral que demuestre las competencias adquiridas durante la carrera.",
+      "Plan de pruebas, registro y ejecución de pruebas para la aplicación web Buggy Cars, incluyendo reporte de bugs y documentación técnica.",
     detalles:
-      "Este proyecto final representará la culminación de mis estudios en Ingeniería en Sistemas. Será una aplicación web completa que resolverá un problema real, integrando conocimientos de desarrollo full-stack, base de datos, seguridad y arquitectura de software. El proyecto incluirá documentación técnica completa, pruebas unitarias y un deployment profesional.",
-    estado: "En planificación",
-    fechaEstimada: "Diciembre 2024",
+      "Este proyecto consiste en la elaboración de un plan completo de pruebas para la aplicación web 'Buggy Cars', que permite a los usuarios votar por autos deportivos y dejar opiniones. El proyecto incluye pruebas manuales, reporte de bugs, pruebas automatizadas y documentación según los estándares de la Universidad Mariano Gálvez. El objetivo es desarrollar habilidades técnicas como profesional de sistemas en el área de calidad de software.",
+    estado: "En ejecución",
+    fechaEstimada: "27 de Octubre 2024",
     tecnologias: [
-      "React",
-      "Node.js",
-      "MySQL",
-      "Express",
-      "Tailwind CSS",
-      "JWT",
-      "REST API",
+      "Playwright",
+      "Selenium WebDriver",
+      "axe-core",
+      "Pruebas Manuales",
+      "Cross-browser Testing",
+      "GitHub",
+      "Documentación APA",
     ],
     githubUrl: "#",
-    universidad: "Universidad Mariano Gálvez",
-    semestre: "10mo Semestre",
-    duracion: "3 meses",
-    complejidad: "Avanzada",
+    universidad: "Universidad Mariano Gálvez de Guatemala",
+    semestre: "Ingeniería en Sistemas",
+    duracion: "1 mes",
+    complejidad: "Intermedia-Avanzada",
+    urlAplicacion: "https://budgy.justtestit.org/",
+    plantillaPruebas:
+      "https://docs.google.com/spreadsheets/d/1M8_R49LZpXb_-fDqTqYYzBfND3wfCNk5c2dfS9R4Qq/edit?usp=sharing",
+    plantillaErrores:
+      "https://docs.google.com/document/d/1NRbby1pNBxvnDnxnq0xACtd4sEE-8Vr61txJWCu1iJs/edit?usp=sharing",
   },
 ];
 

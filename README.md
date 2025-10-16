@@ -1,12 +1,28 @@
-# React + Vite
+# 🚀 Portafolio Profesional - Jeremy Rodriguez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF?logo=vite)](https://vitejs.dev/)
 
-Currently, two official plugins are available:
+## 🌟 Demo en Vivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**🔗 URL del Sitio Implementado:** ---------> https://portafolio-dev-if4k.vercel.app <---------- ENTRA AQUI PARA VER EL DEMO EN VIVO DE MI PORTAFOLIO PROFESIONAL
 
-## Expanding the ESLint configuration
+## 📖 Descripción
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Portafolio profesional desarrollado como proyecto final para la Universidad Mariano Gálvez de Guatemala. Incluye:
+
+- **🎓 Perfil académico** - Información personal y formación
+- **⚡ Habilidades técnicas** - Tecnologías y herramientas dominadas
+- **📚 Mis Tareas** - Trabajos académicos y proyectos
+- **🚀 Proyecto Final**
+- **⭐ Reseñas** - Comentarios de visitantes
+- **📞 Contacto** - Información de contacto profesional
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Frontend:** React 18, Vite
+- **Estilos:** Tailwind CSS
+- **Iconos:** React Icons
+- **Despliegue:** GitHub Pages
+- **Control de Versiones:** Git & GitHub
