@@ -8,7 +8,7 @@ const projects = [
     detalles:
       "Este proyecto consiste en la elaboración de un plan completo de pruebas para la aplicación web 'Buggy Cars', que permite a los usuarios votar por autos deportivos y dejar opiniones. El proyecto incluye pruebas manuales, reporte de bugs, pruebas automatizadas y documentación según los estándares de la Universidad Mariano Gálvez. El objetivo es desarrollar habilidades técnicas como profesional de sistemas en el área de calidad de software.",
     estado: "En ejecución",
-    fechaEstimada: "27 de Octubre 2024",
+    fechaEstimada: "27 de Octubre 2025",
     tecnologias: [
       "Playwright",
       "Selenium WebDriver",

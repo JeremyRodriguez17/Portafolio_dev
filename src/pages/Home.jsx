@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 import FilterBar from "../components/FilterBar";
 import tasks from "../data/tasks.js";
 import Contact from "../components/Contact";
-import Reviews from "../components/reviews";
 import ScrollButtons from "../components/ScrollButtons";
 
 export default function Home() {
@@ -58,7 +57,6 @@ export default function Home() {
           {/* ← Contenedor sin margen */}
           <Projects />
           <Contact />
-          <Reviews />
           <ScrollButtons />
         </div>
       </main>

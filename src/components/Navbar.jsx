@@ -40,7 +40,6 @@ export default function Navbar() {
     { name: "Mis Tareas", section: "tasks", icon: "📚" },
     { name: "Proyectos", section: "projects", icon: "🚀" },
     { name: "Contacto", section: "contact", icon: "📞" },
-    { name: "Reseñas", section: "reviews", icon: "⭐" },
   ];
 
   return (

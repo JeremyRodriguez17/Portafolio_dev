@@ -84,12 +84,7 @@ export default function Footer() {
                   icon: "🚀",
                   desc: "Proyecto final",
                 },
-                {
-                  name: "Reseñas",
-                  href: "#reviews",
-                  icon: "⭐",
-                  desc: "Opiniones",
-                },
+
                 {
                   name: "Contacto",
                   href: "#contact",
